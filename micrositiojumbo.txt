@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumbo de Pistacho | Comportamiento del Consumidor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jumbo: {
+                            pistacho: '#84A98C',
+                            pistachoOscuro: '#60866D',
+                            pistachoClaro: '#DDE6D6',
+                            chocolate: '#5C2E0C',
+                            dorado: '#F5C763',
+                            crema: '#FDF3E7',
+                            oscuro: '#3A1F0A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .tab-active {
+                @apply border-b-4 border-jumbo-pistacho text-jumbo-chocolate font-semibold bg-white;
+            }
+            .tab-inactive {
+                @apply text-gray-600 hover:bg-jumbo-pistachoClaro hover:text-jumbo-chocolate;
+            }
+            .card-shadow {
+                @apply shadow-lg rounded-xl bg-white p-6 transition-all duration-300 hover:shadow-xl;
+            }
+            .texto-destacado {
+                @apply text-jumbo-pistachoOscuro font-semibold;
+            }
+        }
+    </style>
+</head>
+<body class="bg-jumbo-pistachoClaro font-sans text-gray-800 min-h-screen">
+    <!-- Cabecera -->
+    <header class="bg-gradient-to-r from-jumbo-pistacho to-jumbo-pistachoOscuro text-white py-6 shadow-md">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                    <h1 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold">🌰 Jumbo de Pistacho</h1>
+                    <p class="text-green-100">Análisis del Comportamiento del Consumidor</p>
+                </div>
+                <div class="text-sm text-right text-green-200">
+                    <p>Universidad ECCI | Curso 3AM</p>
+                    <p>Septiembre 2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-0 md:px-6">
+            <div class="flex flex-wrap overflow-x-auto">
+                <button class="tab-btn tab-active px-4 md:px-6 py-4 text-center transition-all whitespace-nowrap" data-tab="inicio">
+                    <i class="fa fa-home mr-2"></i>Inicio
+                </button>
+                <button class="tab-btn tab-inactive px-4 md:px-6 py-4 text-center transition-all whitespace-nowrap" data-tab="marca">
+                    <i class="fa fa-tag mr-2"></i>La Marca
+                </button>
+                <button class="tab-btn tab-inactive px-4 md:px-6 py-4 text-center transition-all whitespace-nowrap" data-tab="consumidor">
+                    <i class="fa fa-user mr-2"></i>Consumidor
+                </button>
+                <button class="tab-btn tab-inactive px-4 md:px-6 py-4 text-center transition-all whitespace-nowrap" data-tab="investigacion">
+                    <i class="fa fa-search mr-2"></i>Investigación
+                </button>
+                <button class="tab-btn tab-inactive px-4 md:px-6 py-4 text-center transition-all whitespace-nowrap" data-tab="conclusiones">
+                    <i class="fa fa-check-circle mr-2"></i>Conclusiones y Estrategia
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- Pestaña 1: Inicio -->
+        <section id="inicio" class="tab-content">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold text-jumbo-pistachoOscuro mb-4">Consumer Challenge 360°</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Análisis completo del comportamiento del consumidor frente al nuevo producto Jumbo de Pistacho, dentro del mercado colombiano de chocolates.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-8 border-t-4 border-jumbo-pistacho">
+                    <h3 class="text-xl font-semibold text-jumbo-pistachoOscuro mb-4">Integrantes del Proyecto</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fa fa-user-circle text-jumbo-pistacho mr-3"></i>Danna Sofia García Barreto</li>
+                        <li class="flex items-center"><i class="fa fa-user-circle text-jumbo-pistacho mr-3"></i>Maria Paula Chaparro Rodríguez</li>
+                        <li class="flex items-center"><i class="fa fa-user-circle text-jumbo-pistacho mr-3"></i>Ana Sofia Gomez Acero</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-semibold text-jumbo-pistachoOscuro mb-4">Objetivo del Proyecto</h3>
+                    <p class="mb-6">Comprender qué factores —sabor, precio, presentación, marca y novedad— influyen en la decisión de compra de los consumidores al elegir Jumbo de Pistacho frente a otras opciones de chocolate disponibles en el mercado colombiano.</p>
+                    
+                    <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-4">Las 4 Fases del Proyecto</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-jumbo-pistachoClaro p-5 rounded-lg border-l-4 border-jumbo-pistacho">
+                            <p class="text-xl font-bold text-jumbo-pistachoOscuro mb-2">Fase 1</p>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Descubrir al consumidor</p>
+                            <p class="text-sm text-gray-600 mt-1">Identificación del perfil, necesidades y expectativas del público objetivo.</p>
+                        </div>
+                        <div class="bg-jumbo-pistachoClaro p-5 rounded-lg border-l-4 border-jumbo-pistacho">
+                            <p class="text-xl font-bold text-jumbo-pistachoOscuro mb-2">Fase 2</p>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Investigación en el mundo real</p>
+                            <p class="text-sm text-gray-600 mt-1">Observación en puntos de venta, encuestas y recolección de datos reales.</p>
+                        </div>
+                        <div class="bg-jumbo-pistachoClaro p-5 rounded-lg border-l-4 border-jumbo-pistacho">
+                            <p class="text-xl font-bold text-jumbo-pistachoOscuro mb-2">Fase 3</p>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Comprender la mente del consumidor</p>
+                            <p class="text-sm text-gray-600 mt-1">Análisis de motivaciones, sesgos cognitivos y comportamiento de compra.</p>
+                        </div>
+                        <div class="bg-jumbo-pistachoClaro p-5 rounded-lg border-l-4 border-jumbo-pistacho">
+                            <p class="text-xl font-bold text-jumbo-pistachoOscuro mb-2">Fase 4</p>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Crear una Estrategia Ganadora</p>
+                            <p class="text-sm text-gray-600 mt-1">Plan estratégico: comunicación, valor, campaña digital y experiencia del cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pestaña 2: La Marca -->
+        <section id="marca" class="tab-content hidden">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-jumbo-pistachoOscuro mb-6 text-center">Jumbo de Pistacho — La Marca</h2>
+                
+                <div class="card-shadow mb-6 border-l-4 border-jumbo-pistacho">
+                    <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-3">¿Qué es Jumbo de Pistacho?</h3>
+                    <p class="mb-4">Es una propuesta innovadora que combina el sabor tradicional del chocolate Jumbo con el pistacho, un ingrediente que ha ganado popularidad por su sabor y textura distintiva. Pertenece al portafolio de Chocolates de <strong class="texto-destacado">Grupo Nutresa</strong>, con amplia trayectoria en el mercado colombiano.</p>
+                </div>
+
+                <div class="card-shadow mb-6">
+                    <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-3">Posicionamiento en el mercado</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Jet: 63% (líder en recuerdo)</li>
+                        <li>• Jumbo: 18% (crecimiento sostenido)</li>
+                        <li>• Gol: 5%</li>
+                        <li>• Hershey's: 1%</li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-2">Jumbo es más recordada entre jóvenes de 11 a 14 años y su mayor consumo se da en estrato 2.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="card-shadow">
+                        <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-3 flex items-center">
+                            <i class="fa fa-bullseye text-jumbo-pistacho mr-2"></i>Competencia Directa
+                        </h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• KITKAT (Nestlé)</li>
+                            <li>• Nestlé Classic con Maní</li>
+                            <li>• Jet, Gol y otras barras de chocolate</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-shadow">
+                        <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-3 flex items-center">
+                            <i class="fa fa-compass text-jumbo-pistacho mr-2"></i>Competencia Indirecta
+                        </h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• Galletas y barras de cereal</li>
+                            <li>• Dulces, caramelos y helados</li>
+                            <li>• Productos de panadería y otros snacks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-shadow bg-jumbo-pistachoClaro">
+                    <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-3">Factores de Diferenciación</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><i class="fa fa-check text-jumbo-pistachoOscuro mt-1 mr-3"></i><span><strong class="texto-destacado">Sabor innovador:</strong> combinación chocolate + pistacho</span></li>
+                        <li class="flex items-start"><i class="fa fa-check text-jumbo-pistachoOscuro mt-1 mr-3"></i><span><strong class="texto-destacado">Identidad reconocida:</strong> respaldo de la marca Jumbo</span></li>
+                        <li class="flex items-start"><i class="fa fa-check text-jumbo-pistachoOscuro mt-1 mr-3"></i><span><strong class="texto-destacado">Presentación moderna:</strong> empaque atractivo y novedoso</span></li>
+                        <li class="flex items-start"><i class="fa fa-check text-jumbo-pistachoOscuro mt-1 mr-3"></i><span><strong class="texto-destacado">Precio accesible:</strong> dirigido a consumo masivo</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pestaña 3: Consumidor -->
+        <section id="consumidor" class="tab-content hidden">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-jumbo-pistachoOscuro mb-6 text-center">El Consumidor Objetivo</h2>
+                
+                <div class="card-shadow mb-6 bg-gradient-to-r from-jumbo-pistachoClaro to-white">
+                    <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-3">Perfil Principal</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Edad:</p>
+                            <p class="text-gray-700">18 – 30 años</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Ubicación:</p>
+                            <p class="text-gray-700">Bogotá, Medellín, Cali, Barranquilla</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Ocupación:</p>
+                            <p class="text-gray-700">Estudiantes universitarios y jóvenes trabajadores</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-jumbo-pistachoOscuro">Frecuencia de compra:</p>
+                            <p class="text-gray-700">Ocasional — por antojo o descanso</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-shadow mb-6">
+                    <h3 class="text-lg font-semibold text-jumbo-pistachoOscuro mb-3">Buyer Persona: Valentina Rodríguez</h3>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-1/3 bg-jumbo-pistachoClaro rounded-xl p-4 text-center">
+                            <div class="w-24 h-24 bg-jumbo-pistacho/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-user fa-3x text-jumbo-pistachoOscuro"></i>
+                            </div>
+                            <p class="font-bold text-lg text-jumbo-pistachoOscuro">Valentina, 21 años</p>
+                            <p class="text-sm text-jumbo-pistacho">Estudiante universitaria — Bogotá</p>
+                        </div>
+                        <div class="w-full md:w-2/3 space-y-4">
+                            <div>
+                                <p class="font-medium text-jumbo-pistachoOscuro">Gustos
